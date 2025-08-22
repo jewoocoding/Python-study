@@ -9,6 +9,18 @@
 
 # 출력
 # 첫째 줄에 답을 출력한다. 생성자가 없는 경우에는 0을 출력한다.
-n = input()
-m = 1
-print(n,m)
+n = int(input())
+answer = 0
+for i in range(n) :
+    sum = 0
+    m = i
+    sum += m
+    while m > 0 :
+        sum += m % 10
+        m //= 10
+    if sum == n :
+        answer = i
+        break
+
+
+print(answer)
